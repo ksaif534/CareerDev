@@ -14,31 +14,37 @@ class Application{
         $this->initializeExpenseArray();//Initialize the expense array
         $commandName = $argv[1] ?? null;//Basic Argument Parsing
         if ($commandName == 'simple-php-cli') {
-            $this->showOptions();
-            $choice = $this->readChoice();
-            switch ($choice) {
-                case 1:
-                    $this->handleOptionOne();
-                    break;
-                case 2:
-                    $this->handleOptionTwo();
-                    break;
-                case 3:
-                    $this->handleOptionThree();
-                    break;
-                case 4:
-                    $this->handleOptionFour();
-                    break;
-                case 5:
-                    $this->handleOptionFive();
-                    break;
-                case 6:
-                    $this->handleOptionSix();
-                    break;
-                
-                default:
-                    # code...
-                    break;
+            while(true){
+                $this->showOptions();
+                $choice = $this->readChoice();
+                switch ($choice) {
+                    case 1:
+                        $this->handleOptionOne();
+                        break;
+                    case 2:
+                        $this->handleOptionTwo();
+                        break;
+                    case 3:
+                        $this->handleOptionThree();
+                        break;
+                    case 4:
+                        $this->handleOptionFour();
+                        break;
+                    case 5:
+                        $this->handleOptionFive();
+                        break;
+                    case 6:
+                        $this->handleOptionSix();
+                        break;
+                    case 7:
+                        $this->handleOptionSeven();
+                        return 0;
+                        break;
+                    
+                    default:
+                        # code...
+                        break;
+                }
             }
         }else{
             $this->showHelp();
@@ -60,6 +66,7 @@ class Application{
         echo " 4. View Expenses\n";
         echo " 5. View Savings\n";
         echo " 6. View Categories\n";
+        echo " 7. Exit\n";
         echo " Enter Your Choice:\n";
     }
 
@@ -106,6 +113,7 @@ class Application{
         }else{
             echo "Sorry, income list is empty\n";
         }
+        echo "\n";
     }
 
     private function handleOptionFour() : void {
@@ -123,6 +131,7 @@ class Application{
         }else{
             echo "Sorry, expense list is empty\n";
         }
+        echo "\n";
     }
 
     private function handleOptionFive() : void {
@@ -153,6 +162,7 @@ class Application{
         }
         //Get the total savings
         echo "The total savings is:" . ($sumIncome - $sumExpense) . "\n";
+        echo "\n";
     }
 
     private function handleOptionSix() : void {
@@ -187,6 +197,11 @@ class Application{
         foreach ($unserializedExpenseCatArr as $item) {
             echo $item . "\n";
         }
+        echo "\n";
+    }
+
+    private function handleOptionSeven() : void {
+        echo "Exiting the application, goodbye!\n";
     }
 
     private function initializeIncomeArray() : void {

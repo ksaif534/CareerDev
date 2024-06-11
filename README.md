@@ -11,6 +11,8 @@ Laravel Career Path Development Course
 
 3. Option 3,4,5,6 will display income, expense, savings and categories of income and expense. Option 1,2 will add income and expense respectively to the files `income-array.txt` and `expense-array.txt`.
 
-4. If you choose option 6, the files from which the income and expense categories are displayed are `income-categories.txt` and `expense-categories.txt`.
+4. The app will continuously ask for users to input until the user types 7 to exit.
 
-5. The main source code resides in the `module2/src/Application.php` file.
+5. If you choose option 6, the files from which the income and expense categories are displayed are `income-categories.txt` and `expense-categories.txt`.
+
+6. The main source code resides in the `module2/src/Application.php` file.

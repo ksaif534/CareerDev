@@ -1,0 +1,1 @@
+a:5:{i:0;s:4:"food";i:1;s:8:"clothing";i:2;s:8:"medicine";i:3;s:9:"utilities";i:4;s:6:"travel";}

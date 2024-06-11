@@ -1,0 +1,15 @@
+{
+    "name": "saifkamal/module2",
+    "autoload": {
+        "psr-4": {
+            "Saifkamal\\Module2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Saif Kamal",
+            "email": "kamal.saifkamal534@gmail.com"
+        }
+    ],
+    "require": {}
+}

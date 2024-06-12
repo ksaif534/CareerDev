@@ -100,7 +100,7 @@ class Application{
 
     private function handleOptionThree() : void {
         //Read File Content
-        $filename = '/Users/saifkamal/Sites/GitHub/PHPBasics/module2/src/income-array.txt';
+        $filename = __DIR__.'/income-array.txt';
         $serializedData = file_get_contents($filename);
         //Get in Array Form
         if (filesize($filename) > 0) {
@@ -118,7 +118,7 @@ class Application{
 
     private function handleOptionFour() : void {
         //Read File Content
-        $filename = '/Users/saifkamal/Sites/GitHub/PHPBasics/module2/src/expense-array.txt';
+        $filename = __DIR__.'/expense-array.txt';
         $serializedData = file_get_contents($filename);
         //Get in Array Form
         if (filesize($filename) > 0) {
@@ -136,9 +136,9 @@ class Application{
 
     private function handleOptionFive() : void {
         //Read Income and Expense File Content
-        $incomeFilename = '/Users/saifkamal/Sites/GitHub/PHPBasics/module2/src/income-array.txt';
+        $incomeFilename = __DIR__.'/income-array.txt';
         $serializedIncomeData = file_get_contents($incomeFilename);
-        $expenseFileName = '/Users/saifkamal/Sites/GitHub/PHPBasics/module2/src/expense-array.txt';
+        $expenseFileName = __DIR__.'/expense-array.txt';
         $serializedExpenseData = file_get_contents($expenseFileName);
         $sumIncome = 0;
         $sumExpense = 0;
@@ -167,8 +167,8 @@ class Application{
 
     private function handleOptionSix() : void {
         //Get the file names
-        $incomeCatFileName = '/Users/saifkamal/Sites/GitHub/PHPBasics/module2/src/income-categories.txt';
-        $expenseCatFileName = '/Users/saifkamal/Sites/GitHub/PHPBasics/module2/src/expense-categories.txt';
+        $incomeCatFileName = __DIR__.'/income-categories.txt';
+        $expenseCatFileName = __DIR__.'/expense-categories.txt';
         //Check if income category file is empty or not
         if (filesize($incomeCatFileName) == 0) {
             //Serialize Income Category Data
@@ -214,7 +214,7 @@ class Application{
 
     private function addIncome($income) : void {
         //Read previous array data from file
-        $filename = '/Users/saifkamal/Sites/GitHub/PHPBasics/module2/src/income-array.txt';
+        $filename = __DIR__.'/income-array.txt';
         $serializedData = file_get_contents($filename);
         //Get in Array form
         if (filesize($filename) > 0) {//There is data
@@ -234,7 +234,7 @@ class Application{
 
     private function addExpense($expense): void {
         //Read previous array data from file
-        $filename = '/Users/saifkamal/Sites/GitHub/PHPBasics/module2/src/expense-array.txt';
+        $filename = __DIR__.'/expense-array.txt';
         $serializedData = file_get_contents($filename);
         //Get in Array form
         if (filesize($filename) > 0) {//There is data
